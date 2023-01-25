@@ -1,0 +1,905 @@
+/*GENERALES*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Nunito Sans', sans-serif;
+	font-family: 'Poppins', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+.titulo-seccion {
+	text-align: center;
+	margin-bottom: 40px;
+}
+.titulo-seccion h2 {
+	color: #0a3782;
+	font-family: 'Nunito', sans-serif;
+	font-size: 3.125rem;
+	margin-bottom: 10px;
+	font-weight: 700;
+}
+.titulo-seccion p {
+	color: #979797;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+/*Boton volver arriba*/
+.btn-volver-arriba {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: rgba(39, 175, 239, 0.5);
+	border-radius: 30%;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 99999;
+	margin-right: -60px;
+	box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.3);
+	transition: all 0.4s ease;
+}
+
+.btn-volver-arriba a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border-radius: 30%;
+	text-align: center;
+}
+
+.btn-volver-arriba a i {
+	color: #fff;
+	font-size: 1rem;
+	line-height: 40px;
+}
+
+/*-------ENCABEZADO-------*/
+
+.menu-bar-pc {
+	min-height: 68px;
+	width: 100%;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	padding: 0 36px;
+	background: transparent;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	z-index: 100;
+}
+
+.logo {
+	display: inline-block;
+	width: 100px;
+}
+
+.logo img {
+	width: 100%;
+	vertical-align: top;
+}
+
+.menu-principal a,
+.top-redes a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 0 10px;
+	color: #0a3782; /*COLOR AZUL LOGO*/
+	font-weight: 600;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	font-size: 0.875rem;
+	letter-spacing: 0;
+	line-height: 1.5em;
+	transition: all 0.3s ease;
+}
+
+.menu-principal a:hover,
+.top-redes a:hover {
+	color: #fff;
+}
+
+/* #27afef; COLOR CELESTE LOGO*/
+
+.menu-principal a:last-child,
+.top-redes a:last-child {
+	padding-right: 0;
+}
+
+.top-redes a i {
+	font-size: 1rem;
+}
+
+/*MENU MOVIL*/
+.menu-mobile {
+	display: none;
+}
+
+/*MENU FIJO*/
+
+.fixed-header {
+	margin-top: -68px;
+	min-height: 68px;
+	border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+	width: 100%;
+	padding: 0 36px;
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	transition: all 0.4s ease;
+}
+
+.fixed-header .menu-principal a:hover,
+.fixed-header .top-redes a:hover {
+	color: #27afef;
+}
+
+/*-------MAIN-------*/
+
+/*BANNER*/
+
+.main {
+	width: 100%;
+	margin-top: -68px;
+}
+
+.main .banner-principal {
+	width: 100%;
+	position: relative;
+}
+
+.main .banner-principal .banner {
+	width: 100%;
+	height: 100vh;
+	background-image: url('../img/banner.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.main .banner-principal .texto-banner {
+	display: inline-block;
+	width: 90%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.main .banner-principal .texto-banner h1 {
+	color: #fff;
+	font-size: 5.0625rem;
+	font-weight: 700;
+	font-family: 'Nunito', sans-serif;
+	line-height: 90px;
+	margin-bottom: 30px;
+}
+
+.main .banner-principal .texto-banner a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 8px 20px;
+	color: #fff;
+	background-color: #27afef;
+	border-radius: 3px;
+	box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.3);
+	transition: all 0.7s ease;
+}
+
+.main .banner-principal .texto-banner a:hover {
+	color: #27afef;
+	background-color: #fff;
+}
+
+/*VIAJES*/
+
+.main .viajes {
+	background: #f8f5f5; /*COLOR CREMA DEL FONDO*/
+	padding: 108px 0 54px 0;
+}
+
+.contenedor-menu {
+	margin-top: 2.5rem;
+}
+
+.contenedor-menu .encabezado {
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+
+.contenedor-menu .encabezado li a {
+	text-decoration: none;
+	color: #0a3782;
+	font-size: 0.75rem;
+	padding: 0 1.4375rem 1.125rem 1.4375rem;
+	display: block;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-bottom: 2px solid transparent;
+}
+
+.contenedor-menu .encabezado a:hover {
+	color: #27afef;
+}
+
+.contenedor-menu .encabezado li.active a {
+	color: #27afef;
+	border-bottom: 2px solid #27afef;
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido {
+	margin-top: 2.5rem;
+	padding: 0 2.25rem;
+	display: flex;
+	justify-content: center;
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido > div {
+	/*HACE REFERENCIA AL HIJO DIRECTO DE CONTENIDO*/
+	display: none;
+	transition: all 0.3s ease;
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .active {
+	display: block;
+	width: 90%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje {
+	width: 32%;
+	position: relative;
+	background-repeat: no-repeat;
+	height: 300px;
+	background-position: center;
+	background-size: cover;
+}
+/*FOTOS DE LOS VIAJES*/
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.arga {
+	background-image: url('../img/viajes1.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.argb {
+	background-image: url('../img/viajes3.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.argc {
+	background-image: url('../img/viajes4.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.suda {
+	background-image: url('../img/viajes10.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.sudb {
+	background-image: url('../img/viajes11.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.sudc {
+	background-image: url('../img/viajes12.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.eua {
+	background-image: url('../img/viajes2.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.eub {
+	background-image: url('../img/viajes5.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.euc {
+	background-image: url('../img/viajes6.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.cara {
+	background-image: url('../img/viajes7.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.carb {
+	background-image: url('../img/viajes8.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.carc {
+	background-image: url('../img/viajes9.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.nortea {
+	background-image: url('../img/viajes13.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.norteb {
+	background-image: url('../img/viajes14.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.nortec {
+	background-image: url('../img/viajes15.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.restoa {
+	background-image: url('../img/viajes16.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.restob {
+	background-image: url('../img/viajes17.png');
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje.restoc {
+	background-image: url('../img/viajes18.png');
+}
+/*FOTOS DE LOS VIAJES*/
+
+.main .viajes .contenedor-menu .contenido .viaje .overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: rgba(133, 168, 192, 0.3);
+	z-index: 1;
+
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.main .viajes .contenedor-menu .contenido .viaje .overlay:hover {
+	background: rgba(133, 168, 192, 0.5);
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .viaje .texto-viaje {
+	color: #fff;
+	font-size: 1.5rem;
+	position: absolute;
+	text-align: center;
+	z-index: 2;
+	margin-top: 220px;
+	margin-left: 10px;
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .btn {
+	display: block;
+	margin: auto;
+	margin-top: 30px;
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .btn a {
+	color: #fff;
+	background-color: #27afef;
+	padding: 10px 20px;
+	border-radius: 3px;
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1rem;
+	text-transform: uppercase;
+	box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.3);
+	transition: all 0.5s ease;
+}
+
+.main .viajes .contenedor .contenedor-menu .contenido .btn a:hover {
+	color: #27afef;
+	background-color: #fff;
+}
+
+/*NOSOTROS*/
+
+.main .nosotros {
+	background: #f8f5f5; /*COLOR CREMA DEL FONDO*/
+	padding: 50px 0 54px 0;
+}
+
+.main .nosotros .contenedor {
+	border-top: 2px solid #ccc;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.main .nosotros .contenedor .titulo-seccion {
+	padding-top: 50px;
+	width: 33.33%;
+	text-align: left;
+}
+
+.main .nosotros .contenedor .titulo-seccion h2 {
+	margin-bottom: 0;
+}
+
+.main .nosotros .contenedor .texto-nosotros {
+	padding-top: 50px;
+	width: 66.66%;
+	text-align: left;
+}
+
+.main .nosotros .contenedor .texto-nosotros p {
+	color: #979797;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+/*SLIDER*/
+
+.main .contenedor-slider {
+	width: 100%;
+	background: #f8f5f5; /*COLOR CREMA DEL FONDO*/
+	padding: 54px 0;
+	overflow: hidden;
+}
+
+.main .contenedor-slider .slider {
+	width: 400%;
+	display: flex;
+}
+
+.main .contenedor-slider .slider .slide {
+	width: 15%;
+	max-width: 950px;
+	margin-right: 0.7%;
+	box-shadow: 0px 20px 40px #aaa;
+}
+
+.main .contenedor-slider .slider .slide img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/*CLIENTES*/
+
+.main .clientes {
+	width: 100%;
+	background: #f8f5f5; /*COLOR CREMA DEL FONDO*/
+	padding-top: 54px;
+	padding-bottom: 108px;
+	padding-left: 0;
+	padding-right: 0;
+	overflow: hidden;
+}
+
+.main .clientes .cliente-opinion {
+	width: 900%;
+	display: flex;
+}
+
+.main .clientes .cliente-opinion .opinion {
+	background-color: #fff;
+	padding: 50px;
+	width: 100%;
+	max-width: 300px;
+	box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.2);
+	text-align: center;
+	margin-left: 0.7%;
+}
+
+.main .clientes .cliente-opinion .opinion h3 {
+	color: #27afef;
+	font-family: 'Nunito', sans-serif;
+	font-size: 1.3rem;
+	margin-bottom: 10px;
+}
+
+.main .clientes .cliente-opinion .opinion p {
+	color: #979797;
+	font-size: 0.8rem;
+	font-weight: 400;
+}
+
+/*CONTACTO*/
+
+.main .contacto {
+	padding: 190px 0;
+	background-image: url('../img/bgbanner.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.main .contacto .contenedor-formulario {
+	background-color: #fff;
+	min-height: 485px;
+	border-radius: 5px;
+	box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.3);
+	display: flex;
+	justify-content: space-between;
+}
+
+.main .contacto .contenedor .contenedor-formulario .formulario {
+	width: 50%;
+	padding: 70px;
+}
+
+.main .contacto .contenedor .contenedor-formulario .formulario h2 {
+	font-size: 2rem;
+	line-height: 24px;
+	color: #0a3782;
+	font-family: 'Nunito', sans-serif;
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+.main .contacto .contenedor .contenedor-formulario .formulario p {
+	color: #979797;
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 30px;
+}
+
+.main .contacto .contenedor .contenedor-formulario .formulario h5 {
+	padding-top: 10%;
+	color: #0a3782;
+	text-align: center;
+	font-size: 1rem;
+}
+
+.main
+	.contacto
+	.contenedor
+	.contenedor-formulario
+	.formulario
+	form
+	input[type='text'],
+.main
+	.contacto
+	.contenedor
+	.contenedor-formulario
+	.formulario
+	form
+	input[type='email'] {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
+	outline: none;
+	width: 100%;
+	margin-bottom: 10px;
+	color: #27afef;
+	font-size: 0.9rem;
+	color: #27afef;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+}
+
+.main .contacto .contenedor .contenedor-formulario .formulario form textarea {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 0;
+	outline: none;
+	width: 100%;
+	max-width: 100%;
+	max-height: 88px;
+	min-height: 88px;
+	margin-bottom: 10px;
+	color: #27afef;
+	font-size: 0.9rem;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.main
+	.contacto
+	.contenedor
+	.contenedor-formulario
+	.formulario
+	form
+	input[type='submit'] {
+	background: #27afef;
+	color: #fff;
+	border: none;
+	padding: 8px;
+	font-size: 0.9rem;
+	width: 100%;
+	border: 1px solid #27afef;
+	border-radius: 3px;
+	text-transform: uppercase;
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 0.5px;
+	cursor: pointer;
+	box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.3);
+	transition: all 0.7s ease;
+}
+
+.main
+	.contacto
+	.contenedor
+	.contenedor-formulario
+	.formulario
+	form
+	input[type='submit']:hover {
+	background: #fff;
+	color: #27afef;
+}
+
+.main .contacto .contenedor .contenedor-formulario .foto {
+	width: 50%;
+	background-image: url('../img/foto-contacto.png');
+	background-size: cover;
+}
+
+/*Validacion de formulario*/
+
+.main .contacto .contenedor .contenedor-formulario .formulario form .error {
+	color: #ff8c8c;
+	font-size: 12px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	display: none;
+}
+
+/* ------PIE DE PAGINA-----*/
+
+footer {
+	background-color: #0a3782;
+	padding: 54px 0;
+	text-align: center;
+}
+
+.bottom-redes a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 0 10px;
+	color: #fff;
+	font-weight: 600;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	letter-spacing: 0;
+	line-height: 1.5em;
+	margin-bottom: 10px;
+	transition: all 0.3s ease;
+}
+
+.bottom-redes a:hover {
+	color: #27afef;
+}
+
+.copy {
+	color: #fff;
+	font-size: 0.8rem;
+}
+
+.copy a {
+	text-decoration: none;
+	color: #f1d9d9;
+	text-transform: uppercase;
+	margin-top: 5px;
+	transition: all 0.3s ease;
+}
+
+.copy a:hover {
+	color: #fb8baf;
+}
+
+/* ------MEDIA QUERIES-----*/
+
+@media screen and (max-width: 1040px) {
+	/*Viajes*/
+
+	.main .viajes .contenedor .contenedor-menu .contenido .btn {
+		margin-top: 50px;
+	}
+	/*Nosotros*/
+	.main .nosotros .contenedor {
+		border-top: 2px solid #ccc;
+		align-items: center;
+		width: 80%;
+	}
+
+	.main .nosotros .contenedor .titulo-seccion {
+		width: 100%;
+		text-align: center;
+	}
+
+	.main .nosotros .contenedor .texto-nosotros {
+		padding-top: 0px;
+		width: 100%;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 900px) {
+	/*Menu*/
+	.menu-bar-pc {
+		display: none;
+	}
+
+	.menu-mobile {
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+		padding: 10px 36px;
+		background: #f8f5f5;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+	}
+
+	.menu-mobile .barra {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.menu-mobile .barra .logo {
+		width: 150px;
+	}
+
+	.menu-mobile .barra .top-redes a:hover {
+		color: #27afef;
+	}
+
+	.menu-mobile .boton-menu {
+		background: rgba(39, 175, 239, 0.5);
+		width: 40px;
+		height: 40px;
+		border-radius: 30%;
+		position: fixed;
+		bottom: 70px;
+		right: 20px;
+		z-index: 101;
+		box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.3);
+	}
+
+	.menu-mobile .boton-menu a {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		border-radius: 30%;
+		text-align: center;
+	}
+
+	.menu-mobile .boton-menu a i {
+		color: #fff;
+		font-size: 1.5rem;
+		line-height: 40px;
+	}
+
+	.menu-mobile .menu-principal {
+		width: 40%;
+		display: block;
+		position: fixed;
+		bottom: 120px;
+		right: 0;
+		border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+		border-top: 1px solid rgba(204, 204, 204, 0.5);
+		border-left: 1px solid rgba(204, 204, 204, 0.5);
+		box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, 0.2);
+		background: #fff;
+		text-align: center;
+		right: -100%;
+	}
+
+	.menu-mobile .menu-principal a {
+		display: block;
+		padding: 10px;
+		border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+	}
+
+	.menu-mobile .menu-principal a:hover {
+		color: #27afef;
+	}
+
+	.fixed-header {
+		display: none;
+	}
+
+	/*Main*/
+
+	.main {
+		margin-top: 83px;
+	}
+
+	/*Viajes*/
+
+	.contenedor-menu .encabezado li a {
+		display: none;
+	}
+
+	.contenedor-menu .encabezado .ver-menu {
+		text-decoration: none;
+		color: #0a3782;
+		font-size: 0.75rem;
+		padding: 0 1.4375rem 1.125rem 1.4375rem;
+		display: block;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		border-bottom: 2px solid transparent;
+	}
+
+	.main .viajes .contenedor .contenedor-menu .contenido .viaje {
+		width: 100%;
+		margin: auto;
+		background-position: bottom;
+		background-size: cover;
+		margin-bottom: 10px;
+	}
+
+	/*Contacto*/
+
+	.main .contacto .contenedor .contenedor-formulario .foto {
+		display: none;
+	}
+
+	.main .contacto .contenedor .contenedor-formulario .formulario {
+		width: 100%;
+	}
+
+	.main .contacto .contenedor .contenedor-formulario .formulario {
+		text-align: center;
+	}
+
+	.main
+		.contacto
+		.contenedor
+		.contenedor-formulario
+		.formulario
+		form
+		input[type='text'],
+	.main
+		.contacto
+		.contenedor
+		.contenedor-formulario
+		.formulario
+		form
+		input[type='email'] {
+		text-align: center;
+	}
+
+	.main .contacto .contenedor .contenedor-formulario .formulario form textarea {
+		text-align: center;
+	}
+
+	/*Pie de Pagina*/
+
+	footer {
+		padding: 20px 0;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	/*Banner Principal*/
+
+	.main .banner-principal .texto-banner h1 {
+		font-size: 4rem;
+	}
+
+	/*Titulo secciones*/
+	.titulo-seccion h2 {
+		font-size: 2.125rem;
+	}
+
+	/*Nosotros*/
+
+	.main .nosotros .contenedor .texto-nosotros p:nth-child(2n + 1) {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	/*Contactos*/
+
+	.main .contacto .contenedor .contenedor-formulario .formulario {
+		width: 100%;
+		padding: 30px;
+	}
+}
